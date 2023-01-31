@@ -9,6 +9,7 @@ migrateup:
 	migrate -path db/migration -database "postgresql://tom:secret@localhost:5432/samplebank" -verbose up
 migratedown:
 	migrate -path db/migration -database "postgresql://tom:secret@localhost:5432/samplebank" -verbose down
+sqlc:
+	sqlc generate
 
-
-.PHONY: createdb postgres dropdb migrateup migratedown
+.PHONY: createdb postgres dropdb migrateup migratedown sqlc
