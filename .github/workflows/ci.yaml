@@ -22,6 +22,8 @@ jobs:
           POSTGRES_DB: samplebank
         ports:
           - 5432:5432
+        ssl:
+          enabled: false
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
